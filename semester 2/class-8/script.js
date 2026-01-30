@@ -1,4 +1,4 @@
-const API_KEY = "3ffa041182664e06b5f44837262301";
+const API_KEY = "b715f2a2fc474200a0543150262301";
 
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('header form');
@@ -36,14 +36,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const dateStr = localtime.split(' ')[0];
 
         card.innerHTML = `
-          <div class="temp">${data.current.temp_c} °C</div>
-          <div>
+          <div class="temperature">${data.current.temp_c} °C</div>
+          <div class="location-data">
             <div class="place">${data.location.name}, ${data.location.country}</div>
-            <div class="meta">${timeStr} ${dayName} ${dateStr}</div>
+            <div class="date-time">
+              <span class="time">${timeStr}</span>
+              <span class="day">${dayName}</span>
+              <span class="date">${dateStr}</span>
+            </div>
           </div>
-          <div class="icon">
-            <img src="https:${data.current.condition.icon}" alt="Weather Icon">
-            <div class="meta">${data.current.condition.text}</div>
+          <div class="weather-status">
+            <div class="icon">
+              <img src="https:${data.current.condition.icon}" alt="Weather Icon">
+            </div>
+            <div class="condition">${data.current.condition.text}</div>
           </div>
         `;
       })
