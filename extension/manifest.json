@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "AI Focus Mode",
+  "version": "1.0",
+  "description": "Simple focus mode UI built with HTML and CSS only.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AI Focus Mode"
+  }
+}

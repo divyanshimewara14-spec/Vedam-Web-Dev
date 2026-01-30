@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 320px;
+  height: 380px;
+  background: radial-gradient(circle at top, #050510, #000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Outfit', sans-serif;
+  overflow: hidden;
+}
+
+.card {
+  position: relative;
+  width: 280px;
+  height: 340px;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow:
+    0 0 30px rgba(0, 255, 255, 0.1),
+    inset 0 0 20px rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(135deg, #00f5d4, #00bbf9, #9b5de5, #f15bb5);
+  background-size: 400% 400%;
+  z-index: 0;
+  -webkit-mask:                 
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: borderGlow 6s linear infinite;
+}
+
+@keyframes borderGlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: -100px;
+  left: -100px;
+  background: radial-gradient(circle, rgba(0,255,255,0.3), transparent 70%);
+  animation: moveGlow 8s infinite alternate ease-in-out;
+  filter: blur(60px);
+  z-index: 0;
+}
+
+@keyframes moveGlow {
+  0% { transform: translate(0,0); }
+  100% { transform: translate(60px, 60px); }
+}
+
+h1 {
+  position: relative;
+  font-size: 1.6rem;
+  background: linear-gradient(90deg, #9b5de5, #00f5d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px rgba(0,255,255,0.3);
+  z-index: 1;
+}
+
+p {
+  position: relative;
+  font-size: 0.9rem;
+  color: #cfcfcf;
+  margin: 20px 0;
+  line-height: 1.5;
+  z-index: 1;
+}
+
+button {
+  position: relative;
+  background: linear-gradient(90deg, #00f5d4, #9b5de5, #00bbf9);
+  border: none;
+  padding: 10px 30px;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 1;
+  transition: 0.3s ease;
+  animation: buttonGlow 4s linear infinite;
+  background-size: 200% auto;
+}
+
+@keyframes buttonGlow {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,255,255,0.4);
+}
+
+footer {
+  position: relative;
+  margin-top: 25px;
+  font-size: 0.8rem;
+  color: #aaa;
+  z-index: 1;
+}
+
+footer span {
+  color: #f15bb5;
+  font-size: 1rem;
+}

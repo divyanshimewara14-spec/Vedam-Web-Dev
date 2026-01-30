@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #colorbox{
+            height: 200px;
+            width: 200px;
+            background-color: lightblue;
+            margin: 10px 0px;
+        }
+    </style>
+</head>
+<body>
+   <h2>Event Listener Examples</h2>
+
+   <button id="btn">Click Me</button>
+
+   <div id="colorbox"></div>
+
+   <form id="myform">
+    <input type="text" id="nameInput" placeholder="type your name" />
+    <button type="submit">Submit</button>
+   </form>
+
+   <script>
+    let btn = document.getElementById("btn");
+    btn.addEventListener("click",() => {
+        let box = document.getElementById("colorbox");
+
+        box.style.backgroundColor = "green";
+
+    })
+
+    const input = document.getElementById("nameInput");
+    input.addEventListener("keypress",(e)=>{
+        console.log("key pressed",e.key);
+    })
+   </script>
+</body>
+</html>

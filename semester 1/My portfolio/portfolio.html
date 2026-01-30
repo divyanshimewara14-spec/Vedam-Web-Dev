@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyPortfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg ,#667eea ,#764ba2);
+    }
+
+    nav {
+      background: linear-gradient(135deg ,#667eea ,#764ba2);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(135deg ,#667eea ,#764ba2);
+      color: white;
+      padding: 80px 100px;
+      min-height: 70vh;
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background-color: #ff7043;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #f4511e;
+    }
+
+    .hero-img {
+      background-color: #e0e0e0;
+      border-radius: 10px;
+      width: 180px;
+      height: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-img img {
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">MyPortfolio</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hi, I'm Divyanshi Mewara</h1>
+      <p>A Frontend Developer exploring the world of design and open-source. Turning ideas into interactive, user-friendly web applications.</p>
+      <button class="btn">View My Work</button>
+    </div>
+    <div class="hero-img">
+      <img src="../bossbaby.jpeg" alt="avatar">
+    </div>
+  </section>
+</body>
+</html>

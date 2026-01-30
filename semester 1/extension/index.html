@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extension</title>
+    <style>
+        .top-div{
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+        }
+        .bottom-div{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+        button{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Todo App</h2>
+    <div class="top-div">
+        <button class="toggle">Show/Hide</button>
+    </div>
+    <div class="bottom-div">
+    </div>
+    <script>
+        //select the button
+        let button= document.querySelector(".toggle");
+        //listen to that button
+        button.addEventListener("click",function
+            onClick(){
+                alert("Hello");
+            })
+    </script>
+    
+</body>
+</html>
